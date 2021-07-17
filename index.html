@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yemek arama Motoru</title>
 </head>
-<body>
-    KODUNUZU BURAYA YAZABILIRSINIZ
+<body >
+    <div id ="loading" > LOADING...</div>
+    <div id="user_info"></div>
+    <form id ="meal_form" hidden>
+        <label for="search_meal"> Yemek Ara : </label>
+        <input type="text" id="search_meal" >
+    </form>
+    <button id ="add_remove_favorite" hidden>Seçilenleri Favorilere Ekle/Çıkar </button>
+    <ul id ="meal_list"></ul>
     <script src="index.js"></script>
 </body>
 </html>
