@@ -70,10 +70,8 @@ function logKey(e) {
             for(let i =0 ; i<selectedMeal.length ; i++){
                 if(!isInLocalStorage(selectedMeal[i].id)){
                     localStorage.setItem(selectedMeal[i].id ,selectedMeal[i].innerHTML)
-                    selectedMeal[i].style.border = "2px solid blue";
-                }else{
-                    selectedMeal[i].style.border = "2px solid blue";
                 }
+                selectedMeal[i].style.border = "2px solid blue";
             }
             selectedMeal = [];
         }
@@ -86,20 +84,3 @@ function isInLocalStorage(item){
     }
     return false;
 }
-/*const ul = document.getElementById("meal_list");
-ul.addEventListener("click",()=>{
-    let listItems = document.getElementsByTagName('li');
-    for(let i = 0;  i< listItems.length ; i++){
-        listItems[i].addEventListener("click" , function (){
-            if(listItems[i].style.border ==="1px solid black") listItems[i].style.border= `2px solid red`;
-            else if(listItems[i].style.border ===`2px solid red`) listItems[i].style.border= "1px solid black";
-
-        })
-    }
-   listItems.forEach((item) => {
-        item.addEventListener('click', (event) => {
-           alert(`${event.currentTarget.innerHTML} item was click`);
-        });
-    });
-})*/
-
